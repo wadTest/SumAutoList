@@ -6,50 +6,54 @@
     android:weightSum="10">
 
     <LinearLayout
+        android:id="@+id/linPrimary"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:id="@+id/linPrimary"
-        android:weightSum="2"
+        android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:layout_marginRight="10dp">
+        android:orientation="horizontal"
+        android:weightSum="2">
+
         <EditText
+            android:id="@+id/txtService"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_design"
             android:gravity="center"
             android:padding="10dp"
-            android:id="@+id/txtService"
-            android:textSize="18sp"
-            android:background="@drawable/rectangle_design"
             android:textColor="@android:color/black"
-            android:layout_weight="1"/>
+            android:textSize="18sp" />
+
         <EditText
+            android:id="@+id/txtPrice"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="0"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_design"
             android:gravity="center"
+            android:hint="Number"
             android:inputType="number"
             android:padding="10dp"
-            android:id="@+id/txtPrice"
-            android:textSize="18sp"
-            android:background="@drawable/rectangle_design"
             android:textColor="@android:color/black"
-            android:layout_weight="1"/>
+            android:textSize="18sp" />
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/linBtn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="9"
-        android:gravity="center"
-        android:id="@+id/linBtn">
+        android:gravity="center">
+
         <Button
+            android:id="@+id/btnAdd"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_margin="5dp"
-            android:id="@+id/btnAdd"
+            android:background="@drawable/button_design_plus"
             android:text="+"
-            android:textSize="18sp"
-            android:background="@drawable/button_design_plus"/>
+            android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>
