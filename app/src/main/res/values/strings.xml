@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DemoProject</string>
+
+    <string-array name="spinnerItems">
+        <item>2-3 Hours</item>
+        <item>3-4 Hours</item>
+        <item>4-5 Hours</item>
+    </string-array>
+</resources>
