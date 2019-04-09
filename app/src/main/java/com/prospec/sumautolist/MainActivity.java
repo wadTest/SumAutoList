@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView tableList;// RecyclerView list
     ArrayList<ModelMain> modelMains;
     private AdapterMain adapterMain;
-    private Toolbar toolbar;// แถบเครื่องมือ
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 //        Toolbar
-        setTitle("เพิ่ม ลบ และรวมผลลัพธ์อัตโนมัติ");
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolBar();
 
 //        List
         tableList = (RecyclerView) findViewById(R.id.tableList);
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnNext).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                startActivity(new Intent(MainActivity.this, HomeActivity.class));
             }
         });
 
@@ -53,7 +51,23 @@ public class MainActivity extends AppCompatActivity {
         tableList.setAdapter(adapterMain);
 
         adapterMain.addItem(new ModelMain("", 0, true), modelMains.size());
-    }
+    }//Method
+
+    private void toolBar() {
+        //        ADD Toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("ที่ดินเปล่า");
+        toolbar.setSubtitle("โปรดกรอกรายละเอียดที่ดินเปล่า");
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }//end toolbar
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -3,6 +3,8 @@
     <string name="edit_praped">เอกสารสิทธิ์</string>
     <string name="edit_ntee">เนื้อที่ดิน</string>
     <string name="edit_number1">เลขที่</string>
+    <string name="edit_province">เลือกจังหวัด</string>
+    <string name="aumpor">เลือกอำเภอ</string>
 
     <string-array name="spinnerItems">
         <item>2-3 Hours</item>

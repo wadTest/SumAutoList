@@ -3,28 +3,37 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="10">
+    android:weightSum="30">
 
     <LinearLayout
         android:id="@+id/linPrimary"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginRight="10dp"
-        android:layout_weight="1"
+        android:layout_marginRight="3dp"
+        android:layout_weight="2"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_design"
+            android:entries="@array/ekasan"
+            android:textAlignment="center"
+            android:textSize="@dimen/size_main" />
 
         <EditText
             android:id="@+id/txtService"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:hint="เลขที่"
             android:background="@drawable/rectangle_design"
             android:gravity="center"
-            android:padding="10dp"
+            android:padding="5dp"
             android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/size_main" />
 
         <EditText
             android:id="@+id/txtPrice"
@@ -33,27 +42,25 @@
             android:layout_weight="1"
             android:background="@drawable/rectangle_design"
             android:gravity="center"
-            android:hint="Number"
+            android:hint="ตรม."
             android:inputType="number"
-            android:padding="10dp"
+            android:padding="5dp"
             android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/size_main" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linBtn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="9"
+        android:layout_weight="28"
         android:gravity="center">
 
         <Button
             android:id="@+id/btnAdd"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:background="@drawable/button_design_plus"
-            android:text="+"
-            android:textSize="18sp" />
+            android:text="+" />
     </LinearLayout>
 </LinearLayout>
