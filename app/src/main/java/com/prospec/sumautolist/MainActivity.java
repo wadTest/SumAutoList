@@ -13,33 +13,36 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+// class Main
 public class MainActivity extends AppCompatActivity {
 
-
-    public static TextView txtTotalPrice;
-    RecyclerView tableList;
+    //    ประกาศตัวแปร
+    public static TextView txtTotalPrice;// Text รวมผลลัพธ์ อัตโนมัติ
+    RecyclerView tableList;// RecyclerView list
     ArrayList<ModelMain> modelMains;
     private AdapterMain adapterMain;
-    private Toolbar toolbar;
+    private Toolbar toolbar;// แถบเครื่องมือ
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Create An Initial Invoice");
 
+//        Toolbar
+        setTitle("เพิ่ม ลบ และรวมผลลัพธ์อัตโนมัติ");
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+//        List
         tableList = (RecyclerView) findViewById(R.id.tableList);
         tableList.setLayoutManager(new LinearLayoutManager(this));
 
+//        ช่อง Total
         txtTotalPrice = (TextView) findViewById(R.id.txtTotalPrice);
-
         findViewById(R.id.btnNext).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+//                startActivity(new Intent(MainActivity.this, HomeActivity.class));
             }
         });
 
@@ -81,4 +84,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-}
+}//Main Class
