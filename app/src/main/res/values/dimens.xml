@@ -7,4 +7,5 @@
     <dimen name="size_main">16sp</dimen>
     <dimen name="size18">18sp</dimen>
     <dimen name="size20">20sp</dimen>
+    <dimen name="marginTop5dp">5dp</dimen>
 </resources>
