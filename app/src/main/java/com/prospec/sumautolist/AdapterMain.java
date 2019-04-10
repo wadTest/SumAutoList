@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
+//RecyclerView List
 public class AdapterMain extends RecyclerView.Adapter<AdapterMain.DataObjectHolder> {
     private static MyClickListener myClickListener;
     private ArrayList<ModelMain> modelMains;

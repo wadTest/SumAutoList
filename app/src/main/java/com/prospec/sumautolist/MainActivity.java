@@ -16,7 +16,7 @@ import java.util.ArrayList;
 // class Main
 public class MainActivity extends AppCompatActivity {
 
-    //    ประกาศตัวแปร
+    //    ประกาศตัวแปร0
     public static TextView txtTotalPrice;// Text รวมผลลัพธ์ อัตโนมัติ
     RecyclerView tableList;// RecyclerView list
     ArrayList<ModelMain> modelMains;
