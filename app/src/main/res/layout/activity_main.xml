@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="16dp">
 
             <!--เนื้อหา-->
             <LinearLayout
@@ -54,8 +54,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <!--ที่ดินเปล่า-->
@@ -71,8 +71,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
-                    android:background="@drawable/b_edittext"
                     android:gravity="center"
+                    android:background="@drawable/b_edittext"
                     android:text="0"
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main" />
@@ -82,17 +82,15 @@
             <!--แถวที่ -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginTop="5dp"
-                android:background="#bbdefb"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
 
                 <!--เอกสารสิทธิ์-->
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4"
                     android:text="@string/edit_praped"
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main"
@@ -101,9 +99,9 @@
                 <!--เลขที่-->
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2"
                     android:text="@string/edit_number1"
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main"
@@ -112,9 +110,9 @@
                 <!--เนื้อที่ดิน-->
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2"
                     android:text="@string/edit_ntee"
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main"
@@ -124,24 +122,23 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/tableList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_margin="5dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:background="@android:color/white"
                 android:gravity="right"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="รวมเนื้อที่ดิน"
-                    android:textColor="@color/colorBack"
-                    android:textSize="@dimen/size_main"
-                    android:textStyle="bold" />
+                    android:text="Total"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/txtTotalPrice"
@@ -149,156 +146,40 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20sp"
                     android:text="0"
-                    android:textColor="@color/colorBack"
-                    android:textSize="@dimen/size_main"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="20dp"
-                    android:text="ตรม."
-                    android:textColor="@color/colorBack"
-                    android:textSize="@dimen/size_main"
+                    android:text=" AED"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="ที่ตั้งที่ดิน"
-                android:textColor="@color/colorBack"
-                android:textSize="@dimen/size18"
+                android:layout_marginTop="20dp"
+                android:text="Add Note"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!--จังหวัด-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:text="จังหวัด"
-                    android:textColor="@color/colorBack"
-                    android:textSize="@dimen/size_main" />
-
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="2.5">
-
-                    <Spinner
-                        android:id="@+id/spinner3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="2.5"
-                        android:hint="@string/edit_province"
-                        android:inputType="text"
-                        android:textAlignment="center"
-                        android:textSize="@dimen/size_main" />
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
-
-
-            <!--จังหวัด-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:text="เขต/อำเภอ"
-                    android:textColor="@color/colorBack"
-                    android:textSize="@dimen/size_main" />
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_weight="2.5">
-
-                    <Spinner
-                        android:id="@+id/spinner4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2.5"
-                        android:hint="@string/aumpor"
-                        android:inputType="text"
-                       android:layout_gravity="center"
-                        android:textSize="@dimen/size_main" />
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
-
-            <!--จังหวัด-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="แขวง/ตำบล"
-                    android:textColor="@color/colorBack"
-                    android:textSize="@dimen/size_main" />
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/editT5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/b_edittext"
-                    android:enabled="true"
-                    android:focusable="true"
-                    android:hint="ตำบล"
-                    android:inputType="text"
-                    android:textAlignment="center"
-                    android:textSize="@dimen/size_main" />
-            </LinearLayout>
-
-            <!--จังหวัด-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ถนน"
-                    android:textColor="@color/colorBack"
-                    android:textSize="@dimen/size_main" />
-
-                <!--android:enabled="true"-->
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/editT6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/b_edittext"
-                    android:focusable="true"
-                    android:hint="ถนน"
-                    android:inputType="text"
-                    android:textAlignment="center"
-                    android:textSize="@dimen/size_main" />
-            </LinearLayout>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Write Few Words About Services To Be Done By You"
+                android:textSize="15sp" />
         </LinearLayout>
+
     </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:text="Submit To Customer" />
 </RelativeLayout>

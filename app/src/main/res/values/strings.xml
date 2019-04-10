@@ -5,6 +5,8 @@
     <string name="edit_number1">เลขที่</string>
     <string name="edit_province">เลือกจังหวัด</string>
     <string name="aumpor">เลือกอำเภอ</string>
+    <string name="SaveData">Save Data</string>
+    <string name="edit_text">โครงการ</string>
 
     <string-array name="spinnerItems">
         <item>2-3 Hours</item>
