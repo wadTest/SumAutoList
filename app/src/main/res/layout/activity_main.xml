@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="MainActivity">
 
     <!--ที่ดินเปล่า-->
 
@@ -39,8 +41,8 @@
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main" />
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/name"
+                <EditText
+                    android:id="@+id/e_setname"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
@@ -68,7 +70,7 @@
                     android:textSize="@dimen/size_main" />
 
                 <TextView
-                    android:id="@+id/number"
+                    android:id="@+id/t_number"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
@@ -79,13 +81,12 @@
                     android:textSize="@dimen/size_main" />
             </LinearLayout>
 
-
             <!--ตาราง-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/colorSky"
+                android:background="#e3f2fd"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -94,7 +95,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="4"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="@string/edit_praped"
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main"
@@ -105,7 +107,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="2"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
                     android:text="@string/edit_number1"
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main"
@@ -116,7 +119,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="@string/edit_ntee"
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main"
@@ -170,7 +174,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/marginTop5dp"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -185,7 +189,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="*"
-                    android:textColor="@color/colorRed"
+                    android:textColor="#f91e1e"
                     android:textSize="@dimen/size18"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -205,6 +209,7 @@
                     android:textSize="@dimen/size_main" />
 
                 <AutoCompleteTextView
+                    android:id="@+id/a_province"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
@@ -230,6 +235,7 @@
                     android:textSize="@dimen/size_main" />
 
                 <AutoCompleteTextView
+                    android:id="@+id/a_area"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
@@ -255,6 +261,7 @@
                     android:textSize="@dimen/size_main" />
 
                 <AutoCompleteTextView
+                    android:id="@+id/a_district"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
@@ -279,14 +286,15 @@
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main" />
 
-                <AutoCompleteTextView
+                <EditText
+                    android:id="@+id/e_road"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
                     android:background="@drawable/b_edittext"
-                    android:gravity="center"
                     android:hint="ถนน"
-                    android:textColor="@color/colorBack"
+                    android:inputType="text"
+                    android:textAlignment="center"
                     android:textSize="@dimen/size_main" />
             </LinearLayout>
 
@@ -304,14 +312,15 @@
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main" />
 
-                <AutoCompleteTextView
+                <EditText
+                    android:id="@+id/e_soi"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
                     android:background="@drawable/b_edittext"
-                    android:gravity="center"
                     android:hint="ซอย"
-                    android:textColor="@color/colorBack"
+                    android:inputType="text"
+                    android:textAlignment="center"
                     android:textSize="@dimen/size_main" />
             </LinearLayout>
 
@@ -329,14 +338,15 @@
                     android:textColor="@color/colorBack"
                     android:textSize="@dimen/size_main" />
 
-                <AutoCompleteTextView
+                <EditText
+                    android:id="@+id/e_project"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginLeft="3dp"
                     android:background="@drawable/b_edittext"
-                    android:gravity="center"
                     android:hint="โครงการ"
-                    android:textColor="@color/colorBack"
+                    android:inputType="text"
+                    android:textAlignment="center"
                     android:textSize="@dimen/size_main" />
             </LinearLayout>
 
@@ -361,7 +371,7 @@
                     android:layout_marginLeft="3dp">
 
                     <Spinner
-                        android:id="@+id/spinner5"
+                        android:id="@+id/s_category"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -392,7 +402,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="checkboxName"
-                    android:text="ตรงตามชื่อก่อนหน้า"
+                    android:text="ตรงตามชื่อ\nก่อนหน้า"
                     android:textSize="@dimen/size_main" />
 
                 <CheckBox
@@ -405,7 +415,7 @@
                     android:textSize="@dimen/size_main" />
 
                 <CheckBox
-                    android:id="@+id/checkBox6"
+                    android:id="@+id/checkBox3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -456,7 +466,7 @@
 
                         <!--Subheading ตรงตามชื่อก่อนหน้า-->
                         <CheckBox
-                            android:id="@+id/checkBox3"
+                            android:id="@+id/checkBox4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -464,7 +474,7 @@
                             android:textSize="@dimen/size_main" />
 
                         <CheckBox
-                            android:id="@+id/checkBox4"
+                            android:id="@+id/checkBox5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -495,8 +505,8 @@
                         android:textSize="@dimen/size_main" />
 
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/editT9"
+                    <EditText
+                        android:id="@+id/e_name"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_marginLeft="3dp"
@@ -522,8 +532,8 @@
                         android:textColor="@color/colorBack"
                         android:textSize="@dimen/size_main" />
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/editT10"
+                    <EditText
+                        android:id="@+id/e_address"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_marginLeft="3dp"
@@ -548,8 +558,8 @@
                         android:textColor="@color/colorBack"
                         android:textSize="@dimen/size_main" />
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/editT11"
+                    <EditText
+                        android:id="@+id/e_phone"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_marginLeft="3dp"
@@ -567,19 +577,22 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
+                <ImageView
+                    android:id="@+id/image1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:text="ส่งเอกสาร" />
 
-                <Button
+                <ImageView
+                    android:id="@+id/image2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="ส่งภาพถ่าย" />
 
-                <Button
+                <ImageView
+                    android:id="@+id/image3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
